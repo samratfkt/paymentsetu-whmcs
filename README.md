@@ -6,6 +6,9 @@
 
 Accept UPI payments in your WHMCS billing system with PaymentSetu - India's leading payment gateway solution.
 
+> ### 💰 **Zero Transaction Fees! Pay Only a Fixed Monthly Charge & Keep 100% of Your Revenue**
+> Unlike traditional payment gateways that charge per transaction, PaymentSetu offers a simple flat monthly subscription. **No hidden fees. No percentage cuts. Just unlimited transactions for one fixed price!**
+
 ---
 
 ## 🚀 Features
