@@ -1,13 +1,13 @@
-# PaymentSetu Payment Gateway for WHMCS
+# PaymentSetu Payment Verification Module for WHMCS
 
-[![PaymentSetu](https://img.shields.io/badge/PaymentSetu-Payment%20Gateway-4CAF50?style=for-the-badge)](https://paymentsetu.com)
+[![PaymentSetu](https://img.shields.io/badge/PaymentSetu-Payment%20Verification-4CAF50?style=for-the-badge)](https://paymentsetu.com)
 [![WHMCS](https://img.shields.io/badge/WHMCS-Compatible-blue?style=for-the-badge)](https://www.whmcs.com)
 [![Version](https://img.shields.io/badge/version-1.1-orange?style=for-the-badge)](https://github.com)
 
-Accept UPI payments in your WHMCS billing system with PaymentSetu - India's leading payment gateway solution.
+Accept UPI payments in your WHMCS billing system with PaymentSetu - India's leading payment verification platform.
 
 > ### 💰 **Zero Transaction Fees! Pay Only a Fixed Monthly Charge & Keep 100% of Your Revenue**
-> Unlike traditional payment gateways that charge per transaction, PaymentSetu offers a simple flat monthly subscription. **No hidden fees. No percentage cuts. Just unlimited transactions for one fixed price!**
+> Unlike traditional payment platforms that charge per transaction, PaymentSetu offers a simple flat monthly subscription. **No hidden fees. No percentage cuts. Just unlimited verifications for one fixed price!**
 
 ---
 
@@ -33,7 +33,7 @@ Before you begin, make sure you have:
 
 ## 🛠️ Installation Guide
 
-Follow these simple steps to set up the PaymentSetu payment gateway in your WHMCS system.
+Follow these simple steps to set up the PaymentSetu payment verification module in your WHMCS system.
 
 ### Step 1: Download the Module
 
@@ -59,11 +59,11 @@ whmcs/
             └── paymentsetu.php
 ```
 
-### Step 3: Activate the Gateway in WHMCS
+### Step 3: Activate the Module in WHMCS
 
 1. Log in to your WHMCS admin panel
-2. Go to **Setup** → **Payments** → **Payment Gateways**
-3. Click on the **All Payment Gateways** tab
+2. Go to **Setup** → **Payments** → **Payment Gateways** *(WHMCS menu name)*
+3. Click on the **All Payment Gateways** tab *(WHMCS menu name)*
 4. Find **PaymentSetu** in the list and click on it
 5. Check the box to **Activate** the module
 6. You will now see the PaymentSetu settings page
@@ -109,7 +109,7 @@ Now you need to register the webhook URL and get your API key from PaymentSetu.
 
 Now return to your WHMCS admin panel:
 
-1. Go back to **Setup** → **Payments** → **Payment Gateways**
+1. Go back to **Setup** → **Payments** → **Payment Gateways** *(WHMCS menu name)*
 2. Select **PaymentSetu** from the list
 3. In the **API Key** field, paste the API key you copied from PaymentSetu
 4. (Optional) Enable **Block Non-INR Transactions** if you only want to accept INR currency
@@ -119,7 +119,7 @@ Now return to your WHMCS admin panel:
 
 ## ✅ You're Done!
 
-The PaymentSetu payment gateway is now active on your WHMCS system. Customers will see a "Pay Now" button on their invoices that redirects them to PaymentSetu's secure payment page.
+The PaymentSetu payment verification module is now active on your WHMCS system. Customers will see a "Pay Now" button on their invoices that redirects them to PaymentSetu's secure payment page.
 
 ---
 
@@ -129,7 +129,7 @@ The PaymentSetu payment gateway is now active on your WHMCS system. Customers wi
 2. Customer clicks the **Pay Now** button
 3. Customer is redirected to PaymentSetu's payment page
 4. Customer scans the UPI QR code and completes payment
-5. PaymentSetu sends a webhook notification to WHMCS
+5. PaymentSetu verifies the payment and sends a webhook notification to WHMCS
 6. Invoice is automatically marked as paid in WHMCS
 
 ![PaymentSetu Transaction Dashboard](screenshot-paymentsetudashboard-3.png)
@@ -153,16 +153,16 @@ The PaymentSetu payment gateway is now active on your WHMCS system. Customers wi
 
 1. Check that the webhook URL is correctly configured in your PaymentSetu dashboard
 2. Verify that the API key in WHMCS matches the one in PaymentSetu
-3. Check WHMCS logs: **Utilities** → **Logs** → **Gateway Log**
+3. Check WHMCS logs: **Utilities** → **Logs** → **Module Log**
 
 ### Getting "Transaction Blocked" error?
 
 - This means you are trying to pay an invoice in a currency other than INR
-- Go to **Setup** → **Payments** → **Payment Gateways** → **PaymentSetu**
+- Go to **Setup** → **Payments** → **Payment Gateways** *(WHMCS menu name)* → **PaymentSetu**
 - Uncheck **Block Non-INR Transactions** to allow other currencies (not recommended)
 - Or change your invoice currency to INR
 
-### Cannot find PaymentSetu in the gateway list?
+### Cannot find PaymentSetu in the module list?
 
 - Make sure you uploaded the files to the correct folders
 - Check file permissions (644 for files, 755 for folders)
@@ -179,7 +179,7 @@ The PaymentSetu payment gateway is now active on your WHMCS system. Customers wi
 
 ## 📄 License
 
-This module is provided as-is for use with PaymentSetu payment gateway services.
+This module is provided as-is for use with PaymentSetu payment verification services.
 
 ---
 
