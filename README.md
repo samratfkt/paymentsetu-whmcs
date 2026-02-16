@@ -27,29 +27,41 @@ Before you begin, make sure you have:
 
 1. A WHMCS installation (version 7.0 or higher)
 2. Admin access to your WHMCS backend
-3. A PaymentSetu account - [Create one here](https://paymentsetu.com)
 
 ---
 
 ## 🛠️ Installation Guide
 
-Follow these simple steps to set up the PaymentSetu payment verification module in your WHMCS system.
+Follow these simple steps to get started — from creating your PaymentSetu account to accepting your first payment.
 
-### Step 1: Download the Module
+### Step 1: Create a PaymentSetu Account
 
-Download or clone this repository to your computer.
+1. Go to [https://paymentsetu.com](https://paymentsetu.com)
+2. Click on **Sign Up** and create your account
+3. Complete the registration and log in to your dashboard
 
-### Step 2: Upload Files to WHMCS
+### Step 2: Download the Module
 
-Upload the module files to your WHMCS installation:
+📦 **[Download paymentsetu-whmcs-module.zip (v1.1)](https://github.com/samratfkt/paymentsetu-whmcs/releases/download/v1.1/paymentsetu-whmcs-module.zip)**
 
-1. Open your WHMCS installation folder on your server
-2. Navigate to the `modules/gateways/` folder
-3. Upload the `paymentsetu.php` file to the `modules/gateways/` folder
-4. Navigate to the `modules/gateways/callback/` folder (create it if it doesn't exist)
-5. Upload the `paymentsetu.php` file from the `callback` folder to `modules/gateways/callback/`
+### Step 3: Upload Files to WHMCS
 
-**File Structure:**
+#### ⚡ Quick Install (Recommended)
+
+1. Upload the downloaded **`paymentsetu-whmcs-module.zip`** to your server
+2. Extract the zip directly into your **WHMCS root directory**
+3. The folder structure will align automatically — you're done with this step!
+
+#### 🔧 Manual Install
+
+If you prefer to upload files manually:
+
+1. Extract the zip on your computer
+2. Open your WHMCS installation folder on your server
+3. Upload `paymentsetu.php` to the `modules/gateways/` folder
+4. Upload `paymentsetu.php` from the `callback` folder to `modules/gateways/callback/`
+
+**File Structure after extraction:**
 ```
 whmcs/
 └── modules/
@@ -59,7 +71,7 @@ whmcs/
             └── paymentsetu.php
 ```
 
-### Step 3: Activate the Module in WHMCS
+### Step 4: Activate the Module in WHMCS
 
 1. Log in to your WHMCS admin panel
 2. Go to **Setup** → **Payments** → **Payment Gateways** *(WHMCS menu name)*
@@ -71,7 +83,7 @@ whmcs/
 ![WHMCS PaymentSetu Configuration Page](paymentsetu-whmcs-screenshot1.png)
 *PaymentSetu configuration page in WHMCS admin panel*
 
-### Step 4: Copy the Webhook URL
+### Step 5: Copy the Webhook URL from WHMCS
 
 On the PaymentSetu settings page in WHMCS, you will see a **Webhook URL** displayed at the top.
 
@@ -79,13 +91,13 @@ On the PaymentSetu settings page in WHMCS, you will see a **Webhook URL** displa
    ```
    https://yourdomain.com/modules/gateways/callback/paymentsetu.php
    ```
-2. **Copy this URL** - you will need it in the next step
+2. **Copy this URL** — you will need it in the next step
 
 > 💡 **Tip:** You can also access this page later by going to `/admin/configgateways.php` in your WHMCS installation.
 
-### Step 5: Configure PaymentSetu Dashboard
+### Step 6: Get Your API Key from PaymentSetu Dashboard
 
-Now you need to register the webhook URL and get your API key from PaymentSetu.
+Now you need to register the webhook URL and generate your API key.
 
 1. Go to [https://paymentsetu.com/developer/api-credentials](https://paymentsetu.com/developer/api-credentials)
 2. Log in to your PaymentSetu account
@@ -94,18 +106,18 @@ Now you need to register the webhook URL and get your API key from PaymentSetu.
 #### Fill in the form:
 
 - **NAME:** Enter a name for this API key (e.g., "WHMCS Production" or "My WHMCS Store")
-- **WEBHOOK URL (OPTIONAL):** Paste the webhook URL you copied from WHMCS in Step 4
+- **WEBHOOK URL (OPTIONAL):** Paste the webhook URL you copied from WHMCS in Step 5
 
 4. Click the **Create API Key** button
 5. Your API key will be generated automatically
-6. **Copy the API key** - you will need it in the next step
+6. **Copy the API key** — you will need it in the next step
 
 ![PaymentSetu API Key and Webhook Dashboard](screenshotpaymentsetu-dashboard.png)
 *PaymentSetu dashboard showing API key and webhook management*
 
 > ⚠️ **Important:** Keep your API key secure and never share it publicly.
 
-### Step 6: Add API Key to WHMCS
+### Step 7: Add API Key to WHMCS
 
 Now return to your WHMCS admin panel:
 
