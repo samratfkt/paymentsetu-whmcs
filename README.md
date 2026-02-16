@@ -65,6 +65,9 @@ whmcs/
 5. Check the box to **Activate** the module
 6. You will now see the PaymentSetu settings page
 
+![WHMCS PaymentSetu Configuration Page](paymentsetu-whmcs-screenshot1.png)
+*PaymentSetu configuration page in WHMCS admin panel*
+
 ### Step 4: Copy the Webhook URL
 
 On the PaymentSetu settings page in WHMCS, you will see a **Webhook URL** displayed at the top.
@@ -94,6 +97,9 @@ Now you need to register the webhook URL and get your API key from PaymentSetu.
 5. Your API key will be generated automatically
 6. **Copy the API key** - you will need it in the next step
 
+![PaymentSetu API Key and Webhook Dashboard](screenshotpaymentsetu-dashboard.png)
+*PaymentSetu dashboard showing API key and webhook management*
+
 > ⚠️ **Important:** Keep your API key secure and never share it publicly.
 
 ### Step 6: Add API Key to WHMCS
@@ -122,6 +128,9 @@ The PaymentSetu payment gateway is now active on your WHMCS system. Customers wi
 4. Customer scans the UPI QR code and completes payment
 5. PaymentSetu sends a webhook notification to WHMCS
 6. Invoice is automatically marked as paid in WHMCS
+
+![PaymentSetu Transaction Dashboard](screenshot-paymentsetudashboard-3.png)
+*Transaction table in PaymentSetu dashboard showing payment history*
 
 ---
 
